@@ -6,21 +6,25 @@ import logo from "../images/logo.png";
 
 const NavBar = () => {
   return (
-    <div className="navbar">
-      <img className="navbar-logo" src={logo} alt="logo" />
-      <ul className="navbar-links">
-        <li className="navbar-links-item">
-          <Link className="item" to="/">
-            View Properties{" "}
-          </Link>
-        </li>
-        <li className="navbar-links-item">
-          <Link className="item" to="/add-property">
-            Add a Property
-          </Link>
-        </li>
-      </ul>
-    </div>
+    <header>
+      <div className="container container-nav">
+        <img className="navbar-logo" src={logo} alt="logo" />
+        <nav>
+          <ul className="navbar-links">
+            <li className="navbar-links-item">
+              <Link className="item" to="/">
+                View Properties{" "}
+              </Link>
+            </li>
+            <li className="navbar-links-item">
+              <Link className="item" to="/add-property">
+                Add a Property
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
   );
 };
 
