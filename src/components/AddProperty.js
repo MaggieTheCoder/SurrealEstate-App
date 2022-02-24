@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Alert from "./Alert";
 import "../styles/AddProperty.css";
 
 const AddProperty = () => {
@@ -13,22 +14,32 @@ const AddProperty = () => {
       price: 0,
       email: "",
     },
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
   };
 
   const [fields, setFields] = useState(initialState.fields);
+  const [alert, setAlert] = useState(initialState.alert);
+
   const handleAddProperty = (event) => {
     event.preventDefault();
-    // eslint-disable-next-line
-    console.log(fields);
+    setAlert({ message: "", isSuccess: false });
+
     axios
       .post("http://localhost:3000/api/v1/PropertyListing", fields)
       .then((response) => {
-        // eslint-disable-next-line
-        console.log(response);
+        setAlert({ message: "Property added", isSuccess: true });
+        return response;
       })
+
       .catch((error) => {
-        // eslint-disable-next-line
-        console.log(error);
+        setAlert({
+          message: "Server error. Please try again later.",
+          isSuccess: false,
+        });
+        return error;
       });
   };
 
@@ -42,6 +53,7 @@ const AddProperty = () => {
       <br />
       <fieldset>
         <form onSubmit={handleAddProperty} className="add-property__form">
+          <Alert message={alert.message} success={alert.isSuccess} />
           <div className="search-criteria__columnOne">
             <label htmlFor="title">
               Title: <br />

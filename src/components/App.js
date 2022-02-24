@@ -9,7 +9,6 @@ const App = () => {
   return (
     <div className="App">
       <NavBar />
-
       <Switch>
         <Route exact path="/" component={Properties} />
         <Route exact path="/add-property" component={AddProperty} />
