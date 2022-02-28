@@ -1,0 +1,25 @@
+.property-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  padding: 30px;
+}
+
+.email-icon {
+  padding-right: 5px;
+}
+
+a:link,
+a:visited {
+  color: #ce6794;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  color: #b0c4de;
+}
