@@ -1,9 +1,11 @@
 .property-card {
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: left;
-  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #ce6794;
+  padding: 3px 3px 3px 5px;
+  margin: 3px;
 }
 
 .email-icon {

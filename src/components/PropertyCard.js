@@ -14,21 +14,21 @@ const PropertyCard = (props) => {
 
   return (
     <div className="property-card">
-      <h1> {title} </h1>
+      <p>{title} </p>
       <p>
         {type}-{city}
       </p>
       <p>
         <FontAwesomeIcon icon={faBed} alt="Bedrooms" className="icon" />
-      </p>
-      <p>
         {bedrooms}
-        <FontAwesomeIcon icon={faBath} alt="Bathrooms" className="icon" />
+      </p>
 
+      <p>
+        <FontAwesomeIcon icon={faBath} alt="Bathrooms" className="icon" />
         {bathrooms}
       </p>
       <p>
-        <FontAwesomeIcon icon={faSterlingSign} />
+        <FontAwesomeIcon icon={faSterlingSign} className="icon" />
         {price}
       </p>
       <p>

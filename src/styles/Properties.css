@@ -1,5 +1,10 @@
-.Properties {
-  text-align: center;
-  font-size: 20px;
-  padding-top: 15px;
+.property-cards__page {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px, 10px 10px 10px;
+  border: 1px #ce6794;
+}
+
+.icon {
+  padding-right: 10px;
 }

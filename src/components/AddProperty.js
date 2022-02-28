@@ -62,6 +62,7 @@ const AddProperty = () => {
                 name="title"
                 value={fields.title}
                 onChange={handleFieldChange}
+                placeholder="e.g Flat for sale"
               />
             </label>
             <br />
@@ -131,6 +132,7 @@ const AddProperty = () => {
               <input
                 id="price"
                 name="price"
+                min={150000}
                 type="number"
                 placeholder="e.g £240,000"
                 value={fields.price}
